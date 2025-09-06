@@ -1,0 +1,119 @@
+from product_data import products
+# TODO: Step 1 - Print out the products to see the data that you are working with.
+products = [
+    {"name": "Eco Water Bottle", "tags": ["eco-friendly", "durable", "recyclable"]},
+    {"name": "Trail Backpack", "tags": ["durable", "water-resistant", "lightweight"]},
+    {"name": "Vegan Leather Wallet", "tags": ["vegan", "stylish", "compact"]},
+    {"name": "Bamboo Toothbrush", "tags": ["eco-friendly", "vegan", "biodegradable"]},
+    {"name": "Smartwatch", "tags": ["tech", "durable", "stylish"]},
+    {"name": "LED Desk Lamp", "tags": ["energy-efficient", "adjustable", "stylish"]},
+    {"name": "Running Shoes", "tags": ["lightweight", "durable", "comfortable"]},
+    {"name": "Bluetooth Speaker", "tags": ["portable", "tech", "wireless"]},
+    {"name": "Portable Charger", "tags": ["tech", "travel-friendly", "reliable"]},
+    {"name": "Noise-Cancelling Headphones", "tags": ["tech", "quiet", "comfortable"]},
+    {"name": "Compost Bin", "tags": ["eco-friendly", "kitchen", "odor-resistant"]},
+    {"name": "Yoga Mat", "tags": ["fitness", "non-slip", "lightweight"]},
+    {"name": "Reusable Grocery Bags", "tags": ["eco-friendly", "reusable", "foldable"]},
+    {"name": "Ergonomic Office Chair", "tags": ["comfortable", "adjustable", "supportive"]},
+    {"name": "Air Purifier", "tags": ["tech", "health", "quiet"]},
+    {"name": "Gaming Mouse", "tags": ["tech", "responsive", "ergonomic"]},
+    {"name": "Fitness Tracker", "tags": ["tech", "fitness", "wearable"]},
+    {"name": "Standing Desk", "tags": ["adjustable", "ergonomic", "modern"]},
+    {"name": "Mini Projector", "tags": ["portable", "tech", "entertainment"]},
+    {"name": "Cast Iron Skillet", "tags": ["durable", "kitchen", "versatile"]},
+    {"name": "Electric Kettle", "tags": ["kitchen", "tech", "energy-efficient"]},
+    {"name": "Foldable Bike", "tags": ["eco-friendly", "portable", "fitness"]},
+    {"name": "Smart Thermostat", "tags": ["tech", "energy-efficient", "smart-home"]},
+    {"name": "Wool Blanket", "tags": ["warm", "natural", "cozy"]},
+    {"name": "Digital Notebook", "tags": ["tech", "reusable", "stylish"]},
+    {"name": "Bamboo Cutlery Set", "tags": ["eco-friendly", "reusable", "compact"]},
+    {"name": "Compact Air Fryer", "tags": ["kitchen", "tech", "compact"]},
+    {"name": "Solar Phone Charger", "tags": ["eco-friendly", "tech", "travel-friendly"]},
+    {"name": "Insulated Lunch Box", "tags": ["kitchen", "portable", "durable"]},
+    {"name": "Smart Light Bulbs", "tags": ["tech", "energy-efficient", "smart-home"]},
+    {"name": "Laptop Stand", "tags": ["tech", "ergonomic", "portable"]},
+    {"name": "Electric Bike", "tags": ["eco-friendly", "tech", "fitness"]},
+    {"name": "Digital Pen", "tags": ["tech", "writing", "portable"]},
+    {"name": "Silicone Food Storage Bags", "tags": ["kitchen", "reusable", "eco-friendly"]},
+    {"name": "UV Sanitizer Box", "tags": ["tech", "health", "compact"]},
+    {"name": "Virtual Reality Headset", "tags": ["tech", "entertainment", "immersive"]},
+    {"name": "Hydroponic Indoor Garden", "tags": ["eco-friendly", "tech", "kitchen"]},
+    {"name": "Wireless Charging Pad", "tags": ["tech", "convenient", "modern"]},
+    {"name": "Magnetic Whiteboard", "tags": ["office", "reusable", "functional"]},
+    {"name": "LED String Lights", "tags": ["decor", "energy-efficient", "stylish"]},
+    {"name": "Adjustable Dumbbells", "tags": ["fitness", "compact", "durable"]},
+    {"name": "Weighted Blanket", "tags": ["cozy", "health", "comfortable"]},
+    {"name": "Camping Stove", "tags": ["portable", "outdoors", "reliable"]},
+    {"name": "Touchless Trash Can", "tags": ["kitchen", "tech", "convenient"]},
+    {"name": "Electric Toothbrush", "tags": ["tech", "health", "rechargeable"]},
+    {"name": "Noise Machine", "tags": ["health", "sleep", "portable"]},
+    {"name": "Pet Water Fountain", "tags": ["tech", "pet", "eco-friendly"]},
+    {"name": "Motion Sensor Light", "tags": ["tech", "smart-home", "safety"]},
+    {"name": "Smart Door Lock", "tags": ["tech", "security", "smart-home"]},
+    {"name": "Cold Brew Coffee Maker", "tags": ["kitchen", "compact", "durable"]}
+]
+
+for p in products:
+    print(p)
+
+
+# TODO: Step 2 - Create a list called customer_preferences and store the user preference in this list.
+customer_preferences = []
+response = "Y"
+while response != "N":
+    preference = input("Input a preference: ")
+    customer_preferences.append(preference) 
+    response = input("Do you want to add another preference? (Y/N): ").upper()
+  
+
+# TODO: Step 3 - Convert customer_preferences list to set to eliminate duplicates.
+customer_preferences=set(customer_preferences)
+
+# TODO: Step 4 - Convert the product tags to sets in order to allow for faster comparisons.
+for p in products:
+    p["tags"] = set(p["tags"])
+
+
+
+# TODO: Step 5 - Write a function to calculate the number of matching tags
+def count_matches(product_tags, customer_tags):
+        return len(product_tags & customer_tags)
+
+
+
+
+# TODO: Step 6 - Write a function that loops over all products and returns a sorted list of matches
+def recommend_products(products, customer_tags):
+    results = []  
+    for product in products:
+        matches = count_matches(product["tags"], customer_tags)
+        if matches > 0:
+            results.append((product["name"], matches))
+    ordered_results = []
+    while results:  
+        best_product = results[0] 
+        for item in results:
+            if item[1] > best_product[1]:  
+                best_product = item
+        ordered_results.append(best_product)   
+        results.remove(best_product)
+    return ordered_results
+
+
+
+# TODO: Step 7 - Call your function and print the results
+recommendations = recommend_products(products, customer_preferences)
+print("Recommended products for you:")
+if recommendations:
+    for name, score in recommendations:
+        print(f"- {name} (matches: {score})")
+    print('Have a blessed day.')
+else:
+    print("Sorry, no products match your preferences.")
+
+
+
+# DESIGN MEMO (write below in a comment):
+#I used a few basic operations to make everything work. The main ones were “if” statements, “for” loops, “else” statements, lists, and while loops. An “if” statement helps the program make decisions, like “if this is true, do this next.” A “for” loop lets the program go through a list of items one by one. “Else” statements tell the code what to do if the first option isn’t true. Lists are useful because they can hold a group of related items, like all the product names or all the tags. Finally, a while loop keeps the program running until a certain condition is met. These tools work together so the program can sort through information and give useful results.
+
+#If the program had to handle 1,000 or more products, things would need to be a little more organized. Instead of comparing everything at once, I would probably make the user pick about three characteristics that matter most. Then the code could narrow down choices more quickly. This would help avoid overwhelming results and keep things efficient, aswell as working seamlessly. 
