@@ -1,7 +1,11 @@
 📖 About Me
+
 🖥️ Computer science student with a strong interest in cybersecurity and web development
+
 🔐 Passionate about building web applications that solve real problems while protecting user data
+
 🎓 Computer Science & Cyber Security student at William Jewell College
+
 🌱 Always learning, experimenting, and improving my technical and security mindset
 
 ⬆️ What I’m Up To
