@@ -1,37 +1,32 @@
-#Hey! I'm Keonne Gladden
+📖 About Me
+🖥️ Computer science student with a strong interest in cybersecurity and web development
+🔐 Passionate about building web applications that solve real problems while protecting user data
+🎓 Computer Science & Cyber Security student at William Jewell College
+🌱 Always learning, experimenting, and improving my technical and security mindset
 
-#I'm a computer science student and Cyber Security passionate about creating web applications that solve real problems and I'm also a cyber security student hoping to learn as much as I can about protecting others online data, aswell as my own. 
+⬆️ What I’m Up To
+🔨 I’m currently…
 
-# 🛠️ Technologies & Tools
-- **Languages**: JavaScript, Python, HTML, CSS
-- **Currently Learning**: React, Node.js, SQL databases
-- **Tools**: VS Code, Git, GitHub 
-- **Interests**:Accessibility, efficient programming, online safety
+Learning how to defend systems against worms and common cyber threats
 
-## 🌱 What I'm Currently Working On
-- Learning how to effectively defend myself against worms and various cyber threats. 
-- Creating a personal portfolio to showcase my projects
-- Contributing documentation improvements to open source projects
+Building a personal portfolio to showcase my projects and growth
 
-- ## 📫 Let's Connect
-- **Email**: gladdenk.24@william.jewell.edu
+Improving documentation and clarity in open-source projects
 
-- ## ⚡ Fun Facts
-- I play Piano
-- I love to lift weights
-- I'm a pretty good track athlete
+🛠️ Technologies & Tools
 
-<!--
-**KeKnows/KeKnows** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Languages: JavaScript, Python, HTML, CSS
 
-Here are some ideas to get you started:
+Currently Learning: React, Node.js, SQL databases
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Tools: VS Code, Git, GitHub
+
+Interests: Accessibility, efficient programming, online safety
+
+📫 How to Reach Me
+You can reach me at: gladdenk.24@william.jewell.edu
+
+⚡ Fun Facts
+🎹 I play piano
+🏋️ I enjoy lifting weights
+🏃 I’m a competitive track athlete
