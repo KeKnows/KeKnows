@@ -28,7 +28,7 @@ Tools: VS Code, Git, GitHub
 Interests: Accessibility, efficient programming, online safety
 
 📫 How to Reach Me
-You can reach me at: gladdenk.24@william.jewell.edu
+You can reach me at: keonnegladden7@gmail.com
 
 ⚡ Fun Facts
 🎹 I play piano
